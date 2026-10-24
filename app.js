@@ -14,6 +14,10 @@ app.get("/" , (req , res)=>{
     res.render('index')
 });
 
+app.get("/shop" , (req , res)=>{
+    res.render('shop')
+})
+
 app.listen(3000 , (req , res)=>{
     console.log("App is runniing")
 })

@@ -5,10 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aurora</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 </head>
 <body>
-    <div class="w-full min-h-screen bg-[#102744] flex items-center justify-center" >
-        <div class="w-220 h-150 bg-[#FAFAF7] rounded"></div>
+    <div class="w-full min-h-screen bg-[#E8E2D9] flex items-center justify-center" >
+        <div class="w-220 h-150 bg-[#FAFAF7] rounded-l-lg  flex">
+
+            <div class="w-110 h-full bg-cover bg-center relative z-10 rounded-l-lg" style="background-image: url('imgs/login page image.png')">
+                <div class="absolute inset-0 bg-black/50 rounded-l-lg"></div>
+                <div class="px-30 py-20 relative z-10">
+                    <h1 class="font-['Montserrat'] tracking-[12px] text-4xl text-white font-medium">AURORA</h1>
+                    <P class="font-['Montserrat'] w-220  font-normal  text-sm text-white  font-normal tracking-[5px] px-3">WEAR YOUR VIBE</P>
+                </div>
+                <div class="px-30 py-10 relative z-10">
+                    <h2 class="font-['Montserrat'] text-3xl font-light leading-tight text-white w-220">
+                        Premium Quality<br />
+                        <span class="font-medium">Modern Styles.</span>
+                    </h2>
+                    <p class="mt-5 font-['Montserrat'] text-base font-light leading-relaxed text-white">
+                         More than just clothes,<br>
+                        it's a lifestyle.
+                    </p>
+                </div>
+            </div>
+
+            <div class="h-full w-110 flex items-center justify-center text-black">
+                <div class="w-full h-130 mt-15">
+                    <div class="py-12">
+                        <h1 class="font-['Montserrat'] tracking-[1px] text-2xl font-semibold px-15 text-[#312B25]">WELCOME</h1>
+                        <P class="font-['Montserrat']  font-normal  text-md font-normal tracking-[1] px-15 text-[#312B25]">Login to your account to continue</P>
+                        <form class="flex flex-col px-15 mt-15">
+                            <div class="relative">
+                                <i class="fa-regular fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-[#312B25]"></i>
+                                <input class="border-1 border-gray-500 rounded-md w-80 px-2 h-9  pl-10 pr-3 text-[#312B25]" name="email" type="email" placeholder="Email address">
+                            </div>
+                            <div class="relative mt-4">
+                                <i class="fa-solid fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-[#312B25]"></i>
+                                <input class="border-1 border-gray-500 rounded-md w-80 px-2 h-9 pl-10 pr-3 text-[#312B25]" name="password" type="password" placeholder="Password">
+                            </div>
+                            <a href="" class="font-['Montserrat'] text-sm mt-1 px-48 w-130 tracking-[1]">Forgot password?</a>
+                            <input class="font-['Montserrat'] font-semibold mt-2 px-15 w-80 h-9 rounded-md bg-[#312B25] text-white" type="submit" value="login">
+                        </form>
+                        <p class="font-['Montserrat']  font-normal  text-md font-normal tracking-[1] px-15 text-[#312B25] mt-3">Don't have an account? <a href="" class="">sign up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
