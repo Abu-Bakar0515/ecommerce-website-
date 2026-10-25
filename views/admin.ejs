@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body>
+    <header class="border-b border-[#ded6cb]">
+    <nav class="max-w-[1500px] mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
+
+      <a href="/" class="text-2xl font-semibold tracking-[0.25em]">
+        AURORA
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="/admin" class="font-semibold border-b border-[#302a25] pb-2">Dashboard</a>
+        <a href="/shop" class="hover:opacity-60">View Store</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-[#302a25] text-white flex items-center justify-center text-sm">
+          A
+        </div>
+        <span class="hidden sm:block text-sm font-medium">Admin</span>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-[1500px] mx-auto px-6 lg:px-12 py-10">
+
+    <!-- Heading -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
+      <div>
+        <p class="text-xs tracking-[0.25em] text-stone-500 mb-2">STORE MANAGEMENT</p>
+        <h1 class="text-3xl md:text-4xl font-semibold">Admin Dashboard</h1>
+        <p class="text-sm text-stone-500 mt-3">Manage your products, prices and discounts.</p>
+      </div>
+
+      <a href="/shop" class="border border-[#302a25] px-5 py-3 text-sm text-center hover:bg-[#e8e0d5]">
+        View Store ↗
+      </a>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
+
+      <div class="border border-[#ded6cb] bg-[#eee8df] p-6">
+        <p class="text-sm text-stone-500">Total Products</p>
+        <h2 class="text-3xl font-semibold mt-3">24</h2>
+        <p class="text-xs text-stone-500 mt-2">Products in your store</p>
+      </div>
+
+      <div class="border border-[#ded6cb] bg-[#eee8df] p-6">
+        <p class="text-sm text-stone-500">Active Discounts</p>
+        <h2 class="text-3xl font-semibold mt-3">08</h2>
+        <p class="text-xs text-stone-500 mt-2">Products on sale</p>
+      </div>
+
+      <div class="border border-[#ded6cb] bg-[#eee8df] p-6">
+        <p class="text-sm text-stone-500">Store Status</p>
+        <h2 class="text-3xl font-semibold mt-3">Active</h2>
+        <p class="text-xs text-stone-500 mt-2">Your store is running</p>
+      </div>
+
+    </div>
+
+    <!-- Form and Preview -->
+    <div class="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_350px] gap-8 items-start">
+
+      <!-- Add Product Form -->
+      <section class="border border-[#ded6cb] bg-[#f8f5f0] p-6 md:p-8">
+
+        <div class="mb-8 pb-5 border-b border-[#ded6cb]">
+          <h2 class="text-xl font-semibold">Add New Product</h2>
+          <p class="text-sm text-stone-500 mt-2">Enter the details of your new product below.</p>
+        </div>
+
+        <form>
+
+          <!-- Image Upload -->
+          <div class="mb-8">
+            <label class="block text-sm font-medium mb-3">Product Image</label>
+
+            <label for="productImage" class="flex flex-col items-center justify-center min-h-52 border-2 border-dashed border-[#d8cfc3] bg-[#f1ece4] cursor-pointer hover:bg-[#eee8df] overflow-hidden">
+
+              <img id="imagePreview" src="" alt="" class="hidden w-full h-64 object-contain p-3">
+
+              <div id="uploadPlaceholder" class="flex flex-col items-center py-10 px-4 text-center">
+                <span class="text-4xl mb-3">↑</span>
+                <span class="text-sm font-medium">Click to upload product image</span>
+                <span class="text-xs text-stone-500 mt-2">PNG, JPG or WEBP</span>
+              </div>
+
+              <input type="file" id="productImage" accept="image/png,image/jpeg,image/webp" class="hidden">
+            </label>
+          </div>
+
+          <!-- Product Name -->
+          <div class="mb-6">
+            <label for="productName" class="block text-sm font-medium mb-2">Product Name *</label>
+            <input type="text" id="productName" placeholder="e.g. Classic Hoodie" required class="w-full border border-[#ded6cb] bg-transparent px-4 py-3 text-sm">
+          </div>
+
+          <!-- Category and SKU -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+            <div>
+              <label for="category" class="block text-sm font-medium mb-2">Category *</label>
+              <select id="category" required class="w-full border border-[#ded6cb] bg-[#f5f1eb] px-4 py-3 text-sm">
+                <option value="">Select category</option>
+                <option>Hoodies</option>
+                <option>T-Shirts</option>
+                <option>Sweatshirts</option>
+                <option>Jackets</option>
+                <option>Trousers</option>
+                <option>Accessories</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="sku" class="block text-sm font-medium mb-2">Product SKU</label>
+              <input type="text" id="sku" placeholder="e.g. AUR-001" class="w-full border border-[#ded6cb] bg-transparent px-4 py-3 text-sm">
+            </div>
+          </div>
+
+          <!-- Price and Discount -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+            <div>
+              <label for="price" class="block text-sm font-medium mb-2">Original Price ($) *</label>
+              <input type="number" id="price" min="0.01" step="0.01" placeholder="50.00" required class="w-full border border-[#ded6cb] bg-transparent px-4 py-3 text-sm">
+            </div>
+
+            <div>
+              <label for="discount" class="block text-sm font-medium mb-2">Discount (%)</label>
+              <input type="number" id="discount" min="0" max="100" value="0" class="w-full border border-[#ded6cb] bg-transparent px-4 py-3 text-sm">
+            </div>
+          </div>
+
+          <!-- Final Price -->
+          <div class="bg-[#eee8df] border border-[#ded6cb] p-5 mb-6">
+            <p class="text-xs tracking-widest text-stone-500">FINAL SELLING PRICE</p>
+            <div class="flex items-center gap-3 mt-3">
+              <span id="finalPrice" class="text-2xl font-semibold">$0.00</span>
+              <span id="originalPrice" class="hidden text-sm text-stone-500 line-through">$0.00</span>
+              <span id="discountBadge" class="hidden text-xs bg-[#302a25] text-white px-2 py-1">0% OFF</span>
+            </div>
+          </div>
+
+          <!-- Stock and Sizes -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+            <div>
+              <label for="stock" class="block text-sm font-medium mb-2">Stock Quantity *</label>
+              <input type="number" id="stock" min="0" placeholder="50" required class="w-full border border-[#ded6cb] bg-transparent px-4 py-3 text-sm">
+            </div>
+
+            <div>
+              <label for="size" class="block text-sm font-medium mb-2">Available Sizes</label>
+              <select id="size" class="w-full border border-[#ded6cb] bg-[#f5f1eb] px-4 py-3 text-sm">
+                <option>S, M, L, XL</option>
+                <option>S, M, L</option>
+                <option>M, L, XL</option>
+                <option>One Size</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="mb-6">
+            <label for="description" class="block text-sm font-medium mb-2">Product Description</label>
+            <textarea id="description" rows="4" placeholder="Describe your product..." class="w-full border border-[#ded6cb] bg-transparent px-4 py-3 text-sm resize-y"></textarea>
+          </div>
+
+          <!-- Featured -->
+          <div class="mb-8">
+            <label class="flex items-center gap-3 text-sm">
+              <input type="checkbox" id="featured" class="accent-[#302a25] w-4 h-4">
+              Mark as featured product
+            </label>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button type="button" class="flex-1 bg-[#302a25] text-white py-4 text-sm hover:bg-[#51463b]">
+              Add Product
+            </button>
+
+            <button type="reset" class="border border-[#ded6cb] px-6 py-4 text-sm hover:bg-[#eee8df]">
+              Reset Form
+            </button>
+          </div>
+
+        </form>
+      </section>
+
+      <!-- Product Preview -->
+      <aside class="border border-[#ded6cb] bg-[#eee8df] p-6">
+
+        <h2 class="text-lg font-semibold mb-2">Product Preview</h2>
+        <p class="text-sm text-stone-500 mb-6">Preview your product before adding it.</p>
+
+        <div class="relative bg-[#e2d9ce] overflow-hidden">
+          <img id="cardImage" src="" alt="" class="hidden w-full aspect-[4/5] object-cover">
+
+          <div id="cardImagePlaceholder" class="w-full aspect-[4/5] flex items-center justify-center">
+            <span class="text-sm text-stone-500">Product image preview</span>
+          </div>
+
+          <span id="cardDiscount" class="hidden absolute top-3 left-3 bg-[#302a25] text-white text-xs px-3 py-2">SALE</span>
+        </div>
+
+        <div class="pt-5">
+          <p id="cardCategory" class="text-xs text-stone-500 tracking-widest">CATEGORY</p>
+          <h3 id="cardName" class="text-lg font-medium mt-2">Product Name</h3>
+
+          <p id="cardDescription" class="text-sm text-stone-500 mt-2">
+            Your product description will appear here.
+          </p>
+
+          <div class="flex items-center gap-3 mt-4">
+            <span id="cardPrice" class="font-semibold">$0.00</span>
+            <span id="cardOriginalPrice" class="hidden text-sm text-stone-500 line-through">$0.00</span>
+          </div>
+
+          <div class="mt-5 border-t border-[#d8cfc3] pt-4">
+            <div class="flex justify-between text-sm">
+              <span class="text-stone-500">Available Stock</span>
+              <span id="cardStock">0</span>
+            </div>
+
+            <div class="flex justify-between text-sm mt-3">
+              <span class="text-stone-500">Sizes</span>
+              <span id="cardSizes">S, M, L, XL</span>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#ded6cb]">
+    <div class="max-w-[1500px] mx-auto px-6 lg:px-12 py-6 text-xs text-stone-500">
+      © 2026 AURORA. Admin Dashboard.
+    </div>
+  </footer>
+</body>
+</html>

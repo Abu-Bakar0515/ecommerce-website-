@@ -22,6 +22,10 @@ app.get("/cart" , (req , res)=>{
     res.render('cart')
 });
 
+app.get("/admin" , (req , res)=>{
+    res.render('admin')
+});
+
 app.listen(3000 , (req , res)=>{
     console.log("App is runniing")
 })
