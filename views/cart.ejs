@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body>
+    <header class="border-b border-[#ded6cb]">
+    <nav class="max-w-[1500px] mx-auto px-6 lg:px-12 py-5
+                flex items-center justify-between">
+
+      <a href="/" class="text-2xl font-semibold tracking-[0.25em]">
+        AURORA
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/collections">Collections</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-5 text-xl">
+        <a href="/shop" aria-label="Search">⌕</a>
+        <a href="/cart" aria-label="Shopping cart">♧</a>
+        <a href="/login" aria-label="Account">♙</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Page Heading -->
+  <section class="max-w-[1400px] mx-auto px-6 lg:px-12 pt-12 pb-8">
+
+    <p class="text-xs tracking-[0.25em] text-stone-500 mb-3">
+      YOUR SELECTION
+    </p>
+
+    <h1 class="text-4xl md:text-5xl font-semibold">
+      Shopping Cart
+    </h1>
+
+    <p class="text-sm text-stone-500 mt-3">
+      Review your pieces before making them yours.
+    </p>
+
+  </section>
+
+  <!-- Cart Content -->
+  <main class="max-w-[1400px] mx-auto px-6 lg:px-12 pb-20">
+
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px]
+                gap-10 items-start">
+
+      <!-- Cart Items -->
+      <section class="min-w-0">
+
+        <div class="flex items-center justify-between pb-5
+                    border-b border-[#ded6cb]">
+          <h2 class="text-lg font-medium">Your Items (2)</h2>
+
+          <a href="/shop" class="text-sm underline underline-offset-4">
+            Continue Shopping
+          </a>
+        </div>
+
+        <!-- Cart Item 1 -->
+        <article class="grid grid-cols-[100px_minmax(0,1fr)]
+                        sm:grid-cols-[140px_minmax(0,1fr)]
+                        gap-5 py-6 border-b border-[#ded6cb]">
+
+          <div class="bg-[#e8e0d5] rounded-sm overflow-hidden">
+            <img src="" alt=""
+                 class="w-full aspect-[3/4] object-cover">
+          </div>
+
+          <div class="flex flex-col justify-between gap-4">
+
+            <div>
+              <div class="flex justify-between items-start gap-3">
+                <div>
+                  <h3 class="font-medium text-sm sm:text-base">
+                    Classic Hoodie
+                  </h3>
+
+                  <p class="text-sm text-stone-500 mt-2">
+                    Color: Black
+                  </p>
+
+                  <p class="text-sm text-stone-500 mt-1">
+                    Size: M
+                  </p>
+                </div>
+
+                <p class="font-medium text-sm sm:text-base whitespace-nowrap">
+                  $45.00
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+
+              <div class="flex items-center border border-[#ded6cb]
+                          rounded-sm">
+                <button class="px-3 py-2 text-sm hover:bg-[#e8e0d5]"
+                        aria-label="Decrease quantity">−</button>
+
+                <span class="px-3 py-2 text-sm">1</span>
+
+                <button class="px-3 py-2 text-sm hover:bg-[#e8e0d5]"
+                        aria-label="Increase quantity">+</button>
+              </div>
+
+              <button class="text-xs text-stone-500 underline">
+                Remove
+              </button>
+
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Cart Item 2 -->
+        <article class="grid grid-cols-[100px_minmax(0,1fr)]
+                        sm:grid-cols-[140px_minmax(0,1fr)]
+                        gap-5 py-6 border-b border-[#ded6cb]">
+
+          <div class="bg-[#e8e0d5] rounded-sm overflow-hidden">
+            <img src="" alt=""
+                 class="w-full aspect-[3/4] object-cover">
+          </div>
+
+          <div class="flex flex-col justify-between gap-4">
+
+            <div>
+              <div class="flex justify-between items-start gap-3">
+                <div>
+                  <h3 class="font-medium text-sm sm:text-base">
+                    Basic T-Shirt
+                  </h3>
+
+                  <p class="text-sm text-stone-500 mt-2">
+                    Color: Cream
+                  </p>
+
+                  <p class="text-sm text-stone-500 mt-1">
+                    Size: L
+                  </p>
+                </div>
+
+                <p class="font-medium text-sm sm:text-base whitespace-nowrap">
+                  $25.00
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+
+              <div class="flex items-center border border-[#ded6cb]
+                          rounded-sm">
+                <button class="px-3 py-2 text-sm hover:bg-[#e8e0d5]"
+                        aria-label="Decrease quantity">−</button>
+
+                <span class="px-3 py-2 text-sm">1</span>
+
+                <button class="px-3 py-2 text-sm hover:bg-[#e8e0d5]"
+                        aria-label="Increase quantity">+</button>
+              </div>
+
+              <button class="text-xs text-stone-500 underline">
+                Remove
+              </button>
+
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Back to Shop -->
+        <div class="mt-6">
+          <a href="/shop"
+             class="inline-block text-sm underline underline-offset-4">
+            ← Continue Shopping
+          </a>
+        </div>
+
+      </section>
+
+      <!-- Order Summary -->
+      <aside class="bg-[#eee8df] border border-[#ded6cb]
+                    rounded-sm p-6 sm:p-7">
+
+        <h2 class="text-lg font-medium mb-6">
+          Order Summary
+        </h2>
+
+        <div class="space-y-4 text-sm">
+
+          <div class="flex justify-between gap-3">
+            <span class="text-stone-600">Subtotal</span>
+            <span>$70.00</span>
+          </div>
+
+          <div class="flex justify-between gap-3">
+            <span class="text-stone-600">Shipping</span>
+            <span>Calculated at checkout</span>
+          </div>
+
+          <div class="flex justify-between gap-3">
+            <span class="text-stone-600">Discount</span>
+            <span>− $0.00</span>
+          </div>
+
+        </div>
+
+        <!-- Promo Code -->
+        <div class="mt-6 pt-5 border-t border-[#d8cfc3]">
+
+          <label for="promo" class="block text-sm mb-3">
+            Discount Code
+          </label>
+
+          <div class="flex gap-2">
+            <input id="promo" type="text"
+                   placeholder="Enter code"
+                   class="min-w-0 w-full border border-[#d8cfc3]
+                          bg-[#f5f1eb] rounded-sm px-3 py-3
+                          text-sm outline-none focus:border-[#302a25]">
+
+            <button class="border border-[#302a25] px-4 py-3
+                           text-sm hover:bg-[#e2d9ce]">
+              Apply
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Total -->
+        <div class="flex justify-between items-center
+                    border-t border-[#d8cfc3] mt-6 pt-5">
+          <span class="font-medium">Total</span>
+          <span class="text-xl font-semibold">$70.00</span>
+        </div>
+
+        <!-- Checkout -->
+        <a href="/checkout"
+           class="block text-center bg-[#302a25] text-white
+                  rounded-sm py-4 mt-6 text-sm
+                  hover:bg-[#51463b] transition">
+          Proceed to Checkout →
+        </a>
+
+        <p class="text-xs text-center text-stone-500 mt-4">
+          Shipping and taxes calculated at checkout.
+        </p>
+
+        <div class="mt-6 pt-5 border-t border-[#d8cfc3]
+                    text-xs text-stone-500 text-center">
+          Secure checkout · Premium quality · Easy returns
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#ded6cb]">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-6
+                flex flex-col sm:flex-row justify-between gap-3
+                text-xs text-stone-500">
+
+      <p>© 2026 AURORA. Wear Your Vibe.</p>
+      <p>Designed for everyday style.</p>
+
+    </div>
+  </footer>
+</body>
+</html>

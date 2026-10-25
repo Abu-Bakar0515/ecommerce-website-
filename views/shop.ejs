@@ -21,14 +21,14 @@
       <div class="hidden md:flex items-center gap-8 text-sm">
         <a href="/shop">Home</a>
         <a href="/shop">Shop</a>
-        <a href="/collections">Collections</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/cart">Cart</a>
+        <a href="/about">Admin</a>
+        <a href="/contact">About us</a>
       </div>
 
       <div class="flex items-center gap-5 text-xl">
         <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <a href="/cart" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="/views/cart.ejs" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
 
     </nav>
@@ -44,21 +44,16 @@
       Premium quality clothing, crafted for your everyday style.
     </p>
   </section>
-
-  <!-- Main Shop Layout -->
   <main class="max-w-[1500px] mx-auto px-6 lg:px-12 pb-16">
 
     <div class="grid grid-cols-1 lg:grid-cols-[230px_minmax(0,1fr)] gap-8">
 
-      <!-- Left Sidebar Filters -->
       <aside class="border-b lg:border-b-0 lg:border-r border-[#ded6cb] pb-6 lg:pr-7">
 
         <div class="flex items-center justify-between mb-7">
           <h2 class="text-sm font-semibold tracking-[0.2em]">FILTERS</h2>
           <button class="text-xs text-stone-500 underline">Clear all</button>
         </div>
-
-        <!-- Category -->
         <div class="border-b border-[#ded6cb] pb-6 mb-7">
           <h3 class="text-xs font-semibold tracking-widest mb-4">CATEGORY</h3>
 
@@ -87,8 +82,6 @@
             Accessories (5)
           </label>
         </div>
-
-        <!-- Size -->
         <div class="border-b border-[#ded6cb] pb-6 mb-7">
           <h3 class="text-xs font-semibold tracking-widest mb-4">SIZE</h3>
 
@@ -112,8 +105,6 @@
             <input type="checkbox" class="accent-[#302a25]"> XXL
           </label>
         </div>
-
-        <!-- Color -->
         <div class="border-b border-[#ded6cb] pb-6 mb-7">
           <h3 class="text-xs font-semibold tracking-widest mb-4">COLOR</h3>
 
@@ -125,8 +116,6 @@
             <button aria-label="Cream" class="w-6 h-6 rounded-full bg-[#eee6d9] border border-stone-300"></button>
           </div>
         </div>
-
-        <!-- Price -->
         <div class="mb-7">
           <h3 class="text-xs font-semibold tracking-widest mb-4">PRICE</h3>
 
@@ -144,11 +133,7 @@
         </button>
 
       </aside>
-
-      <!-- Product Section -->
       <section class="min-w-0">
-
-        <!-- Search and Sort -->
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-7">
 
           <p class="text-sm text-stone-500">24 products</p>
@@ -169,11 +154,7 @@
           </div>
 
         </div>
-
-        <!-- Product Grid -->
         <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-9">
-
-          <!-- Product 1 -->
           <article class="group min-w-0">
             <div class="relative overflow-hidden rounded-sm bg-[#e8e0d5]">
               <img src="" alt="" class="aspect-[4/5] w-full object-cover">
@@ -183,8 +164,6 @@
             <p class="text-sm mt-2">$45.00</p>
             <button class="w-full mt-3 bg-[#302a25] text-white rounded-md py-2.5 text-xs hover:bg-[#51463b]">Add to Cart</button>
           </article>
-
-          <!-- Product 2 -->
           <article class="group min-w-0">
             <div class="relative overflow-hidden rounded-sm bg-[#e8e0d5]">
               <img src="" alt="" class="aspect-[4/5] w-full object-cover">
@@ -194,8 +173,6 @@
             <p class="text-sm mt-2">$25.00</p>
             <button class="w-full mt-3 bg-[#302a25] text-white rounded-md py-2.5 text-xs hover:bg-[#51463b]">Add to Cart</button>
           </article>
-
-          <!-- Product 3 -->
           <article class="group min-w-0">
             <div class="relative overflow-hidden rounded-sm bg-[#e8e0d5]">
               <img src="" alt="" class="aspect-[4/5] w-full object-cover">
@@ -205,8 +182,6 @@
             <p class="text-sm mt-2">$35.00</p>
             <button class="w-full mt-3 bg-[#302a25] text-white rounded-md py-2.5 text-xs hover:bg-[#51463b]">Add to Cart</button>
           </article>
-
-          <!-- Product 4 -->
           <article class="group min-w-0">
             <div class="relative overflow-hidden rounded-sm bg-[#e8e0d5]">
               <img src="" alt="" class="aspect-[4/5] w-full object-cover">
@@ -216,8 +191,6 @@
             <p class="text-sm mt-2">$65.00</p>
             <button class="w-full mt-3 bg-[#302a25] text-white rounded-md py-2.5 text-xs hover:bg-[#51463b]">Add to Cart</button>
           </article>
-
-          <!-- Product 5 -->
           <article class="group min-w-0">
             <div class="relative overflow-hidden rounded-sm bg-[#e8e0d5]">
               <img src="" alt="" class="aspect-[4/5] w-full object-cover">
@@ -228,7 +201,6 @@
             <button class="w-full mt-3 bg-[#302a25] text-white rounded-md py-2.5 text-xs hover:bg-[#51463b]">Add to Cart</button>
           </article>
 
-          <!-- Product 6 -->
           <article class="group min-w-0">
             <div class="relative overflow-hidden rounded-sm bg-[#e8e0d5]">
               <img src="" alt="" class="aspect-[4/5] w-full object-cover">
@@ -239,7 +211,6 @@
             <button class="w-full mt-3 bg-[#302a25] text-white rounded-md py-2.5 text-xs hover:bg-[#51463b]">Add to Cart</button>
           </article>
 
-          <!-- Product 7 -->
           <article class="group min-w-0">
             <div class="relative overflow-hidden rounded-sm bg-[#e8e0d5]">
               <img src="" alt="" class="aspect-[4/5] w-full object-cover">
@@ -249,8 +220,6 @@
             <p class="text-sm mt-2">$20.00</p>
             <button class="w-full mt-3 bg-[#302a25] text-white rounded-md py-2.5 text-xs hover:bg-[#51463b]">Add to Cart</button>
           </article>
-
-          <!-- Product 8 -->
           <article class="group min-w-0">
             <div class="relative overflow-hidden rounded-sm bg-[#e8e0d5]">
               <img src="" alt="" class="aspect-[4/5] w-full object-cover">
