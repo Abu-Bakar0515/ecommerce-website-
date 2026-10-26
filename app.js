@@ -2,6 +2,7 @@ const express = require('express');
 const { url } = require('inspector');
 const app = express()
 const path = require('path')
+require("./config/db");
 
 app.set("view engine" , "ejs");
 app.use(express.json());
@@ -26,6 +27,6 @@ app.get("/admin" , (req , res)=>{
     res.render('admin')
 });
 
-app.listen(3000 , (req , res)=>{
+app.listen(3020 , (req , res)=>{
     console.log("App is runniing")
 })
